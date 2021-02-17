@@ -7,10 +7,6 @@ Tic Tac Toe Player
 import math
 from copy import deepcopy
 
-
-pygame.init()
-size = width, height = 600, 400
-
 X = "X"
 O = "O"
 EMPTY = None

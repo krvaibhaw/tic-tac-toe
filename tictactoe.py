@@ -1,14 +1,21 @@
 """
-Tic Tac Toe Player
+Tic Tac Toe Player Game
 
+A game in which two players alternately put Xs and Os in 
+compartments of a figure formed by two vertical lines crossing 
+two horizontal lines and each tries to get a row of three X's or
+three O's before the opponent does.
 
 """
+
+
+#Importing the libraries required
 
 import math
 from copy import deepcopy
 
 X = "X"
-O = "O"
+O = "O"         
 EMPTY = None
 
 
@@ -17,12 +24,15 @@ EMPTY = None
 
 def minmax_values(board, alpha, beta, player):
     
-    # If the game is already over return utility
+    # If the game is already over i.e., a row of three X's or
+    # three O's is obtained then return utility
+
     if terminal(board):
         return utility(board)
 
     
     # It X's turn try to maximize the value
+
     if player == X:
         value = -math.inf
 
@@ -36,7 +46,9 @@ def minmax_values(board, alpha, beta, player):
 
         return value
 
+
     # If O's turn try to minimize the value
+
     else:
         value = math.inf
 
@@ -59,6 +71,8 @@ def minmax_values(board, alpha, beta, player):
 def initial_state():
     """
     Returns starting state of the board.
+    That is, every slot is empty at start.
+
     """
     return [[EMPTY, EMPTY, EMPTY],
             [EMPTY, EMPTY, EMPTY],
@@ -68,9 +82,12 @@ def initial_state():
 def player(board):
     """
     Returns player who has the next turn on a board.
+    Based on the which player has played his/her turn previously.
+
     """
     
     # For counting total occupied positions
+
     count = 0
     
     # Assuming that X starts first
@@ -88,10 +105,13 @@ def player(board):
 
 def actions(board):
     """
-    Returns set of all possible actions (i, j) available on the board.
+    Returns set of all possible actions (i, j) that are available 
+    on the board for the player to place his/her marker on.
+
     """
     
     # Store all possible actions as a list of tuples
+
     possible_actions = []
 
     for i in range(3):
@@ -105,12 +125,15 @@ def actions(board):
 def result(board, action):
     """
     Returns the board that results from making move (i, j) on the board.
+
     """
     
     # Unpacking the tuple
+
     a,b = action
 
     # Copy the state as not to update the actual state
+
     new_board =  deepcopy(board)
     turn = player(board)
     
@@ -126,7 +149,9 @@ def result(board, action):
 
 def winner(board):
     """
-    Returns the winner of the game, if there is one.
+    Returns the winner of the game, if there is one
+    If a row of three X's or three O's is obtained
+
     """
     
     if (board[0][0] == board[0][1] == board[0][2] == "X" or
@@ -158,6 +183,7 @@ def winner(board):
 def terminal(board):
     """
     Returns True if game is over, False otherwise.
+
     """
     
     if winner(board) == 'X' or winner(board) == 'O':
@@ -173,6 +199,7 @@ def terminal(board):
 def utility(board):
     """
     Returns 1 if X has won the game, -1 if O has won, 0 otherwise.
+
     """
     
     if winner(board) == 'X':
@@ -188,9 +215,11 @@ def utility(board):
 def minimax(board):
     """
     Returns the optimal action for the current player on the board.
+
     """
     
     # If the game is over return None
+
     if terminal(board):     
         return None
 

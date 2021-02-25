@@ -39,6 +39,8 @@ while True:
         screen.blit(title, titleRect)
 
         # Draw buttons
+        
+
         playXButton = pygame.Rect((width / 8), (height / 2), width / 4, 50)
         playX = mediumFont.render("Play as X", True, black)
         playXRect = playX.get_rect()
@@ -53,7 +55,9 @@ while True:
         pygame.draw.rect(screen, white, playOButton)
         screen.blit(playO, playORect)
 
+        
         # Check if button is clicked
+        # Draw move
         
         click, _, _ = pygame.mouse.get_pressed()
         

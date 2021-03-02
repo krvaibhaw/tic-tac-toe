@@ -8,6 +8,7 @@ pygame.init()
 size = width, height = 600, 400
 
 # Colors
+
 black = (0, 0, 0)
 white = (255, 255, 255)
 
@@ -30,9 +31,12 @@ while True:
     screen.fill(black)
 
     # Let user choose a player.
+    
     if user is None:
 
         # Draw title
+
+
         title = largeFont.render("Play Tic-Tac-Toe", True, white)
         titleRect = title.get_rect()
         titleRect.center = ((width / 2), 50)
@@ -57,8 +61,8 @@ while True:
 
         
         # Check if button is clicked
-        # Draw move
-        
+
+
         click, _, _ = pygame.mouse.get_pressed()
         
         if click == 1:

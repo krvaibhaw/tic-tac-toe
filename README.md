@@ -12,4 +12,18 @@
 ![](https://img.shields.io/badge/Python-blue)
 ![](https://img.shields.io/badge/HTML-blueviolet)
 
+## Running Tic-Tac-Toe:
+
+1. Make sure [Python 3.6+](https://www.python.org/downloads/) is installed.
+2. Install [Flask Web Framework](https://flask.palletsprojects.com/en/2.0.x/).
+3. Install requirements  
+```
+    $ pip install requirements.txt
+``` 
+4. Running the program:
+```
+git clone https://github.com/krvaibhaw/tic-tac-toe.git
+cd tic-tac-toe
+python runner.py
+```
 

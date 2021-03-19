@@ -22,9 +22,13 @@
 ``` 
 4. Running the program:
 ```
-git clone https://github.com/krvaibhaw/tic-tac-toe.git
-cd tic-tac-toe
-python runner.py
+	git clone https://github.com/krvaibhaw/tic-tac-toe.git
+```
+```
+	cd tic-tac-toe
+```
+```
+	python runner.py
 ```
 
 <p align="center">

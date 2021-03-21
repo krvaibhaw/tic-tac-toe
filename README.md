@@ -28,7 +28,7 @@
 	cd tic-tac-toe
 ```
 ```
-	python runner.py
+	python runner.py 
 ```
 
 <p align="center">

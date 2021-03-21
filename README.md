@@ -37,4 +37,7 @@ Feel free to follow along the code provided along with mentioned comments for
 <br>better understanding of the project, if any issues feel free to reach me out.
 <br><br>
 
+## Contributing
 
+Contributions are welcome!
+<br>Please feel free to submit a Pull Request.

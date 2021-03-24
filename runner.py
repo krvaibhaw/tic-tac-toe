@@ -40,7 +40,7 @@ while True:
         title = largeFont.render("Play Tic-Tac-Toe", True, white)
         titleRect = title.get_rect()
         titleRect.center = ((width / 2), 50)
-        screen.blit(title, titleRect)
+        
 
         # Draw buttons
         

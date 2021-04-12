@@ -57,3 +57,12 @@ Where,
 * **player**: may be a *MAX* player or *MIN* player
 
 
+The Python implementation of initial state, i.e. the initial state of the board. First of all, consider it:
+
+```python
+def initial_state():
+
+    return [[EMPTY, EMPTY, EMPTY],
+            [EMPTY, EMPTY, EMPTY],
+            [EMPTY, EMPTY, EMPTY]]
+```

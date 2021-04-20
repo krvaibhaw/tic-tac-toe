@@ -108,3 +108,44 @@ def actions(board):
     return possible_actions
 ```
 
+For MAX player, a bigger score will be received. For a MIN player, a lower score will be received. And in the end, the best move is returned. It will loop through all the possible actions to find the optimal action and take it. Final algorithm:
+
+```python
+def minimax(board):
+
+    if terminal(board):     
+        return None
+
+    move = None
+
+    alpha = -math.inf
+    beta = math.inf
+
+    if player(board) == X:  
+        value = -math.inf
+
+        for action in actions(board):
+            updated_value = minmax_values(result(board, action),alpha, beta, O)
+
+            alpha = max(value, updated_value)
+
+            if updated_value > value:
+                
+                value = updated_value
+                move = action
+
+    else:                     
+        value = math.inf
+
+        for action in actions(board):
+            updated_value = minmax_values(result(board, action),alpha, beta, X)
+
+            beta = min(value, updated_value)
+
+            if updated_value < value:
+                
+                value = updated_value
+                move = action
+
+    return move
+```

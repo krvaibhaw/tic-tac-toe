@@ -47,6 +47,43 @@ Minimax is a artificial intelligence applied in two player games, such as tic-ta
 
 The algorithm search, recursively, the best move that leads the *Max* player to win or not lose (draw). It consider the current state of the game and the available moves at that state, then for each valid move it plays (alternating *min* and *max*) until it finds a terminal state (win, draw or lose).
 
+## Understanding the Algorithm
+
+The algorithm was studied by the book Algorithms in a Nutshell (George Heineman; Gary Pollice; Stanley Selkow, 2009). Pseudocode (adapted):
+
+```
+minimax(state, depth, player)
+
+	if (player = max) then
+		best = [null, -infinity]
+	else
+		best = [null, +infinity]
+
+	if (depth = 0 or gameover) then
+		score = evaluate this state for player
+		return [null, score]
+
+	for each valid move m for player in state s do
+		execute move m on s
+		[move, score] = minimax(s, depth - 1, -player)
+		undo move m on s
+
+		if (player = max) then
+			if score > best.score then best = [move, score]
+		else
+			if score < best.score then best = [move, score]
+
+	return best
+end
+```
+Where,
+
+* **state**: the current board in tic-tac-toe (node)
+* **depth**: index of the node in the game tree
+* **player**: may be a *MAX* player or *MIN* player
+
+
+
 <br><br>
 Feel free to follow along the code provided along with mentioned comments for 
 <br>better understanding of the project, if any issues feel free to reach me out.

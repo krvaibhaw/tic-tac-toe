@@ -82,6 +82,23 @@ Where,
 * **depth**: index of the node in the game tree
 * **player**: may be a *MAX* player or *MIN* player
 
+The Python implementation of initial state, i.e. the initial state of the board. First of all, consider it:
+
+```python
+def initial_state():
+
+    return [[EMPTY, EMPTY, EMPTY],
+            [EMPTY, EMPTY, EMPTY],
+            [EMPTY, EMPTY, EMPTY]]
+```
+Both players start with your worst score. If player is MAX, its score is -infinity. Else if player is MIN, its score is +infinity. **Note:** *infinity* is an alias for inf (from math module, in Python).
+
+```python
+if player(board) == X: 
+        value = -math.inf
+
+elseif player(board) == o:                           
+        value = math.inf
 
 
 <br><br>

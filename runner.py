@@ -14,9 +14,9 @@ white = (255, 255, 255)
 
 screen = pygame.display.set_mode(size)
 
-mediumFont = pygame.font.Font("assets/fonts/OpenSans-Regular.ttf", 28)
-largeFont = pygame.font.Font("assets/fonts/OpenSans-Regular.ttf", 40)
-moveFont = pygame.font.Font("assets/fonts/OpenSans-Regular.ttf", 60)
+mediumFont = pygame.font.Font("assets/font/OpenSans-Regular.ttf", 28)
+largeFont = pygame.font.Font("assets/font/OpenSans-Regular.ttf", 40)
+moveFont = pygame.font.Font("assets/font/OpenSans-Regular.ttf", 60)
 
 user = None
 board = ttt.initial_state()
@@ -55,7 +55,7 @@ while True:
         playOButton = pygame.Rect(5 * (width / 8), (height / 2), width / 4, 50)
         playO = mediumFont.render("Play as O", True, black)
         playORect = playO.get_rect()
-        
+
         playORect.center = playOButton.center
         pygame.draw.rect(screen, white, playOButton)
         screen.blit(playO, playORect)

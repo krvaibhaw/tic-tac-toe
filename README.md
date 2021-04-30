@@ -99,6 +99,41 @@ if player(board) == X:
 
 elseif player(board) == o:                           
         value = math.inf
+```
+
+If the depth is equal zero, then the board hasn't new empty cells to play. Or, if a player wins, then the game ended for MAX or MIN. So the score for that state will be returned.
+
+```python
+def utility(board):
+    
+    if winner(board) == 'X':
+        return 1
+    
+    elif winner(board) == 'O':
+        return -1
+    
+    else:
+        return 0
+```
+* If MAX won: return +1
+* If MIN won: return -1
+* Else: return 0 (draw)
+
+The action function will take the board as input and returns set of all possible actions (i, j) that are available on the board for the player to place his/her marker on.
+
+```python
+def actions(board):
+
+    possible_actions = []
+
+    for i in range(3):
+        for j in range(3):
+            if board[i][j] == EMPTY:
+                possible_actions.append((i,j))
+                
+    return possible_actions
+```
+
 
 
 <br><br>

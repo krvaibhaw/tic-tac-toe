@@ -5,9 +5,16 @@
 ![forthebadge](https://forthebadge.com/images/badges/powered-by-coffee.svg)
 
 ![](https://img.shields.io/badge/Excitement-High-red)
-![](https://img.shields.io/badge/Maintained-Yes-blue)
+![](https://img.shields.io/badge/Maintained-Yes-indigo)
 ![](https://img.shields.io/badge/Pull_Requests-Accepting-yellow)
+![](https://img.shields.io/github/forks/krvaibhaw/tic-tac-toe)
+![](https://img.shields.io/github/contributors/krvaibhaw/tic-tac-toe)
 ![](https://img.shields.io/github/issues/krvaibhaw/tic-tac-toe)
+![](https://img.shields.io/github/stars/krvaibhaw/tic-tac-toe)
+
+![](https://img.shields.io/badge/Contributions-Accepting-pink)
+![](https://img.shields.io/github/license/krvaibhaw/tic-tac-toe)
+[![](https://img.shields.io/badge/By_Me_A_Coffee-Paypal-skyblue)](https://www.paypal.com/paypalme/krvaibhaw/100)
 
 ![](https://img.shields.io/badge/Python-blue)
 ![](https://img.shields.io/badge/HTML-blueviolet)

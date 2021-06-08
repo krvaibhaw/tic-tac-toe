@@ -22,16 +22,26 @@
 ## Running Tic-Tac-Toe:
 
 1. Make sure [Python 3.6+](https://www.python.org/downloads/) is installed.
-2. Install [Flask Web Framework](https://flask.palletsprojects.com/en/2.0.x/).
-3. Install requirements  
+2. Install [Pygame](https://www.pygame.org/news).
+3. Clone this repository :
+```
+    $ git clone https://github.com/krvaibhaw/tic-tac-toe.git
+```
+4. Change Directory:
+```
+    $ cd tic-tac-toe
+```
+5. Install requirements  
 ```
     $ pip install requirements.txt
 ``` 
-4. Running the program:
+6. Running the program:
 ```
-	$ git clone https://github.com/krvaibhaw/tic-tac-toe.git
-	$ cd tic-tac-toe
-	$ python runner.py
+    $ python runner.py
+```
+7. Output : 
+```
+    GUI interface for Tic Tac Toe game.
 ```
 
 <p align="center">

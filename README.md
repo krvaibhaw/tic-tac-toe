@@ -43,6 +43,7 @@
 ```
     GUI interface for Tic Tac Toe game.
 ```
+<br>
 
 <p align="center">
 <img src="/preview/preview.gif">
